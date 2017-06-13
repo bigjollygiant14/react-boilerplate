@@ -1,0 +1,36 @@
+{
+  "name": "react-boilerplate",
+  "version": "1.0.0",
+  "description": "React Boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "bundle": "webpack",
+    "start": "node_modules/.bin/webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bigjollygiant14/react-boilerplate.git"
+  },
+  "keywords": [
+    "React",
+    "Boilerplate",
+    "Redux",
+    "Sass"
+  ],
+  "author": "bigjollygiant14",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bigjollygiant14/react-boilerplate/issues"
+  },
+  "homepage": "https://github.com/bigjollygiant14/react-boilerplate#readme",
+  "devDependencies": {
+    "babel-core": "6.25.0",
+    "babel-loader": "7.0.0",
+    "babel-preset-env": "1.5.2",
+    "rimraf": "2.6.1",
+    "webpack": "2.6.1"
+  },
+  "dependencies": {
+    "react": "15.6.0"
+  }
+}
