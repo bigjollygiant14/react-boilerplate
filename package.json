@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "bundle": "webpack",
-    "start": "node_modules/.bin/webpack-dev-server"
+    "clean": "rimraf docs",
+    "copy": "cp app/index.html docs/index.html",
+    "start": "npm run clean && npm run bundle && npm run copy && node_modules/.bin/webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -14,8 +16,7 @@
   "keywords": [
     "React",
     "Boilerplate",
-    "Redux",
-    "Sass"
+    "Redux"
   ],
   "author": "bigjollygiant14",
   "license": "MIT",
