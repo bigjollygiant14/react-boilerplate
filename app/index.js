@@ -2,12 +2,12 @@ import React from 'react';
 import { render } from 'react-dom';
 
 // Router
-import { HashRouter, Route, IndexRoute } from 'react-router-dom';
+import { HashRouter, Switch, Route } from 'react-router-dom';
 
 // Redux
 import { Provider } from 'react-redux';
 import { createStore, combineReducers } from 'redux';
-import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
+import { routerReducer } from 'react-router-redux'
 
 import videoData from './reducers/videoReducer';
 import initialState from './reducers/initialState';
@@ -29,10 +29,12 @@ render(
   <Provider store={store}>
     <HashRouter>
       <div>
-        <Route exact path="/" component={LandingPage} />
-        <Route path="/video" component={VideoLandingPage} />
-        <Route path="/video/:VideoId" component={VideoChildLandingPage} />
-        <Route path="*" component={NotFoundPage}/>
+        <Switch>
+          <Route exact path="/" component={LandingPage} />
+          <Route path="/video" component={VideoLandingPage} />
+          <Route path="/video/:VideoId" component={VideoChildLandingPage} />
+          <Route component={NotFoundPage}/>
+        </Switch>
       </div>
     </HashRouter>
   </Provider>,
